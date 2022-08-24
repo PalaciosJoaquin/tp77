@@ -1,0 +1,59 @@
+CREATE DATABASE tp77
+  CHARACTER SET DEFAULT
+  COLLATE DEFAULT;
+  
+  CREATE TABLE tiendas (
+  id                int NOT NULL PRIMARY KEY,
+  nombre_comercial  varchar(20),
+  tipo              int,
+  cp                int,
+  poblacion         int,
+  lat               float(15),
+  lng               float(15)
+) ENGINE = InnoDB;
+
+2)
+a)
+select
+*
+from tiendas
+where direccion like '%castello%'
+
+b)
+select
+*
+from tiendas
+where cp=7600 and poblacion=1
+
+c)
+select
+*
+from tiendas
+where tipo=1
+
+d)
+select
+max(lat)
+from tiendas
+
+e)
+select
+min(lng)
+from tiendas
+
+
+3)
+a)
+update tiendas
+set nombre_comercial='OCHOA'
+where nombre_comercial='Boston'
+
+b)
+update tiendas
+set lat=-38.00001
+where nombre_comercial='Wallace'
+
+c)
+update tiendas
+set nombre_comercial='EEM 22'
+where nombre_comercial='Media 22'
